@@ -52,7 +52,7 @@ function getSuites(parentSuite) {
         name: parentSuite[i]['-name'],
         testsuite: parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null,
         testcase: testCaseAtThisLevel,
-        numberOfTestCases: testStepsAtThisLevel,
+        totalSteps: testStepsAtThisLevel,
         percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
         percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
       }
@@ -67,7 +67,7 @@ function getTestCases(testCaseBlock) {
     testCaseBlock.forEach(testcase => {
       let noSteps = testcase.steps.step
       cases.push({
-        id: testcase.externalid,
+        id: testcase['-name'],
         steps: noSteps,
         numberAutomated: calculateNumberAutomated(noSteps)
       })
@@ -93,17 +93,33 @@ function calculateNumberAutomated(steps) {
 
 const table = new Table({
   head: ['Test', '# of Steps', '% Automated', '% Manual'],
-  colWidths: [30, 15, 15, 15]
+  colWidths: [80, 15, 15, 15]
 })
 
 // Pretty print stats for this xml
 finalArr.forEach(suite => {
   table.push([
-    suite.testsuite.name,
+    ` ${suite.testsuite.name}`,
     suite.totalSteps,
     (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
     (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
   ])
+  suite.testsuite.testsuite.forEach(subSuite => {
+    table.push([
+      `  ${subSuite.name}`,
+      subSuite.totalSteps,
+      subSuite.percentAutomated,
+      subSuite.percentManual
+    ])
+    subSuite.testcase.forEach(testCase => {
+      table.push([
+        `   ${testCase.id}`,
+        testCase.steps.length,
+        (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+        (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+      ])
+    })
+  })
 })
 
 console.log(table.toString())
