@@ -1,0 +1,14 @@
+{
+  "name": "testlinktools",
+  "version": "1.0.0",
+  "description": "Helpers for dealing with Test Link test case management artifacts",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Phil",
+  "license": "ISC",
+  "dependencies": {
+    "objtree": "^0.1.24"
+  }
+}

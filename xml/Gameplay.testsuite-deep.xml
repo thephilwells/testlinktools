@@ -1,0 +1,3630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="125752" name="Gameplay" >
+<node_order><![CDATA[6]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="130794" name="Milestones" >
+<node_order><![CDATA[0]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="131004" name="Milestone Animation message for Subscriber User (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[579]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the Animation when user fills the 50% and 75% of the puzzle square.</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Appears only on daily puzzles (no minis or midis) and on all full-size puzzles</li>
+	<li>Does not depend on the backend, so it should appear even without an internet connection</li>
+	<li>This works on&nbsp;<strong>Desktop</strong>&nbsp;only for now!</li>
+	<li>Animation will not appear for Windows 7: IE 11(forNow)</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open browser and navigate to&nbsp;https://www.stg.nytimes.com/crosswords</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Gamehub page should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Login button present at the top right corner.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be successfully redirected to the login screen</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Enter Valid Uname and password.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Values should get filled in respective field</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click on Login button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be successfully redirected to the Gamehub page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click on Today&#39;s puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Puzzle Play screen.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Ok&#39; button present on the Modal.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should be dismissed and Puzzle should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Start filling the square.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Velaue should get enter in the selected square.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Fill upto 50%(aprox) square.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>On completion of 50% &#39;Halfway&#39; animation should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Press the &#39;Backspace&#39; key for 5 to 6 time.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Value of next 5 to 7 squares&nbsp;should be erased.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Enter the value in the square and reach to 50% mark.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;HalfWay&#39; animation should be reappear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Continue to fill the squares upto 75%(aprox)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&quot;3/4 Done!&quot; animation should be trigger.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Clear&#39; menu.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Option dropdown should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Puzzle&#39; option present in Clear dropdown.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Only Puzzle should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[14]]></step_number>
+	<actions><![CDATA[<p>Repeat Step 4 and Step 5</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[15]]></step_number>
+	<actions><![CDATA[<p>Clear the complete word&nbsp;where &#39;Halfway!&#39; animation appears.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[16]]></step_number>
+	<actions><![CDATA[<p>Reveal the Word.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Halfway!&#39; animation should be appear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[17]]></step_number>
+	<actions><![CDATA[<p>Repeat the Step 8</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[18]]></step_number>
+	<actions><![CDATA[<p>Clear the word where &quot;3/4 Done!&quot; animation appears.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[19]]></step_number>
+	<actions><![CDATA[<p>Reveal the Word.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get revealed and &quot;3/4 Done!&quot; animation should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[20]]></step_number>
+	<actions><![CDATA[<p>Click on Archive</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be successfully redirected to the Archive page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[21]]></step_number>
+	<actions><![CDATA[<p>Click any Daily puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to the Game Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[22]]></step_number>
+	<actions><![CDATA[<p>Click on the &#39;Setting&#39; icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle setting screen should be displayed</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[23]]></step_number>
+	<actions><![CDATA[<p>Click on&nbsp; the &#39;Show Puzzle Milestone&#39;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Show Puzzle Milestone&#39; should be unchecked.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[24]]></step_number>
+	<actions><![CDATA[<p>Close the Setting modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle play page should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[25]]></step_number>
+	<actions><![CDATA[<p>Repeat Step 7</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[26]]></step_number>
+	<actions><![CDATA[<p>Fill the puzzle upto 51% and observe</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Halfway Done!&#39; animation should not appear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="130956" name="Milestone Animation message for Anonymous User (Partially Automated)">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[578]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the Animation when user fills the 50% and 75% of the puzzle square.</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Appears only on daily puzzles (no minis or midis) and on all full-size puzzles</li>
+	<li>Does not depend on the backend, so it should appear even without an internet connection</li>
+	<li>This works on&nbsp;<strong>Desktop</strong>&nbsp;only for now!</li>
+	<li>Animation will not appear for Windows 7: IE 11(forNow)</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open browser and navigate to&nbsp;https://www.stg.nytimes.com/crosswords</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Gamehub page should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Scroll down to &#39;Free From Our Archive&#39; and click on any puzzle.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Puzzle Play screen.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Ok&#39; button present on the Modal.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should be dismissed and Puzzle should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Start filling the square.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Value should get enter in the selected square.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Fill upto 50%(aprox) square.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>On completion of 50% &#39;Halfway&#39; animation should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Press the &#39;Backspace&#39; key for 5 to 6 time.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Value of next 5 to 7 squares&nbsp;should be erased.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Enter the value in the square and reach to 50% mark.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;HalfWay&#39; animation should be reappear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Continue to fill the squares upto 75%(aprox)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&quot;3/4 Done!&quot; animation should be trigger.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Clear&#39; menu.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Option dropdown should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Puzzle&#39; option present in Clear dropdown.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Only Puzzle should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Repeat Step 4 and Step 5</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Clear the complete word&nbsp;where &#39;Halfway!&#39; animation appears.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Reveal the Word.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Halfway!&#39; animation should be appear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[14]]></step_number>
+	<actions><![CDATA[<p>Repeat the Step 8</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[15]]></step_number>
+	<actions><![CDATA[<p>Clear the word where &quot;3/4 Done!&quot; animation appears.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get clear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[16]]></step_number>
+	<actions><![CDATA[<p>Reveal the Word.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Word should get revealed and &quot;3/4 Done!&quot; animation should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Partial]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="131054" name="Milestone Animation Message for Offline User (Partially Automated)">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[581]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Home Delivery accounts&nbsp;get the juice</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to www.stg.nytimes.com/crossword as a home delivery admin user with no progress</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page loads as expected and verify that the Daily and Mini Puzzle do not have any progress</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Open Daily Puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Daily Puzzle page loads and puzzle has no progress</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Close &quot;Ready to get started?&quot; modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal disappears and gameplay content area becomes active</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click the Shortz Mode snowflake icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Page reloads and snowflake icon has changed to mustache icon</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Reveal&#39; dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dropdown expands, listing the following options:</p>
+
+<ul>
+	<li>Square</li>
+	<li>Word</li>
+	<li>49.9%</li>
+	<li>74.9%</li>
+	<li>99.9%</li>
+	<li>Puzzle</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click &#39;49.9%&#39; option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>One word less than half of the puzzle squares are filled correctly.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Take User Offline</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Enter letters to complete another word</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Milestones 50% animation appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Partial]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="131031" name="Shortz Mode for Milestones (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[580]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Shortz mode reveal option up to 49% of puzzle</p>
+
+<p>Shortz mode reveal option up to 74% of puzzle</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to www.stg.nytimes.com/crossword as an admin user with no progress</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page loads as expected and verify that the Daily and Mini Puzzle do not have any progress</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Open Daily Puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Daily Puzzle page loads and puzzle has no progress</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Close &quot;Ready to get started?&quot; modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal disappears and gameplay content area becomes active</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click Shortz Mode snowflake icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Page reloads and snowflake icon has changed to mustache icon</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Reveal&#39; dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dropdown expands, listing the following options:</p>
+
+<ul>
+	<li>Square</li>
+	<li>Word</li>
+	<li>49.9%</li>
+	<li>74.9%</li>
+	<li>99.9%</li>
+	<li>Puzzle</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click &#39;49.9%&#39; option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>One word less than half of the puzzle squares are filled correctly.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Reveal&#39; dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dropdown expands, listing the following options:</p>
+
+<ul>
+	<li>Square</li>
+	<li>Word</li>
+	<li>49.9%</li>
+	<li>74.9%</li>
+	<li>99.9%</li>
+	<li>Puzzle</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click &#39;74.9%&#39; option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>One word less than 75% of squares are filled</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="131102" name="Milestone Animation not appear for Mini Puzzle ">
+	<node_order><![CDATA[5]]></node_order>
+	<externalid><![CDATA[582]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the Milestone Animation should not appear on solving Mini Puzzle</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>XWD subscriber should be logged in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click on Today&#39;s Mini Puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to the Mini puzzle play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Start filling the puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Values should be entered in respective squares.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Complete 51% puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Halfway Done!&#39; animation should not appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Continue filling the puzzle and complete 76% of puzzle.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;3/4 Done!!&#39; animation should not appear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+</testsuite><testsuite id="132289" name="Vertical Streaks" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[<p>verify the vertical streaks formed by solving the Daily puzzle in a row.</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><a href="https://jira.nyt.net/browse/XWD-7223">Vertical Streak Epic</a>&nbsp;</li>
+	<li><a href="https://www.figma.com/file/ImfnhWVMYDF84uXpyKd759EP/Vertical-Streaks?node-id=102%3A2">Figma Designs</a></li>
+	<li><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3fd0e2bc7a_0_45">Streak PDF</a></li>
+	<li><a href="https://confluence.nyt.net/pages/viewpage.action?pageId=70919662">Confluence Link</a></li>
+</ul>
+]]></details> 
+
+<testcase internalid="132309" name="Vertical Streak when Current Streak and Days in a row are 0">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[589]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the streak&nbsp;message on the game hub page after solving today&#39;s daily with gold when Current Streak and Days in a row are zero</p>
+
+<p>Story ticket Jira link:&nbsp;https://jira.nyt.net/browse/XWD-7448</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>User should be on XWD page</li>
+	<li>Subscriber user with <strong>0 Current Streak</strong> and <strong>0 Days in a Row</strong>&nbsp;should be logged in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click on Today&#39;s Daily puzzle&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Puzzle Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Solve the puzzle without using any cheat&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Congratulations modal with Gold Star should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Verify the messages on the Congratulations modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following messages should be displayed:</p>
+
+<ul>
+	<li>Congrats!
+	<ul>
+		<li>&nbsp; you solved a Monday&nbsp;puzzle in 00:00 minutes</li>
+	</ul>
+	</li>
+	<li><strong>&#39;1 Day Streak&#39;</strong> message should be displayed in yellow color banner.</li>
+</ul>
+
+<p>* <strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">PDF&nbsp;Page</a></strong><strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">&nbsp;Link</a>&nbsp;to verify the message</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Close the Congrats Modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should be closed successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Verify the streak message below the Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Star icon follow by <strong>You&#39;re on 1 Day Streak</strong> message should be present below the Daily tile</li>
+	<li>No of day(s) mentioned in the message on hub should be same as mentioned on <strong>Congrats</strong> modal message</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132290" name="Vertical Streak : Archive page UI">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[587]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the UI on the Archive page in Daily tab for Vertical Streaks</p>
+
+<p>Tickets:&nbsp;</p>
+
+<ul>
+	<li>https://jira.nyt.net/browse/XWD-7553</li>
+	<li>https://jira.nyt.net/browse/XWD-7448</li>
+</ul>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Subscriber user should be logged in</li>
+	<li>User should have at least&nbsp; 4 puzzles solved on Monday(or any other day) with Gold Star in a row&nbsp;</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Navigate to https://stg.nytimes.com/crosswords</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be directed to the Game Hub page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Login button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should redirect to the Login page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Enter email and password of the Subscriber user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Value should get entered in respective fields</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click on Login button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be logged in and redirected to gamehub page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click on Archive</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be successfully redirected to the Archive page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Inspect the Monday&#39;s puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following should be visible on Page</p>
+
+<ul>
+	<li>There should be a vertical line in yellow color connecting the Monday&#39;s&nbsp;</li>
+	<li>Date should be mention netween the line connecting the two puzzles</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click on List icon present at the Top right corner</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Puzzles should be displayed in List view&nbsp;</li>
+	<li>All Monday&#39;s puzzle should be displayed with Gold Star icon&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click on&nbsp; Grid icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle should be displayed in Grid&nbsp; view</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Click on XWD icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to the Gamehub page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Click on Archive</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>User should be redirected to the Archive page</li>
+	<li>Vertical between the puzzles should persist</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132302" name="Vertical Streak when Current Streak and Days in a row are 1">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[588]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the message &quot;You&#39;re on 2 day Streak&quot; message on the game hub page and Congrats modal after solving today&#39;s daily with gold when Current &nbsp;Streak and Days in a row were 1</p>
+
+<p>Story ticket Jira link:&nbsp;https://jira.nyt.net/browse/XWD-7448</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>User should be on XWD page</li>
+	<li>Subscriber user with <strong>1&nbsp;Current Streak</strong> and <strong>1 Days in a Row</strong>&nbsp;should be logged in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Verify the Streak Message on below the Daily Puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;You&#39;re on 1 day streak! <strong>KEEP IT GOING</strong>&#39; should be present below daily puzzle tile</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Game Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Solve the puzzle without using any cheat&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Congratulations modal with Gold Star should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Verify the messages on the Congratulations modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following messages should be displayed:</p>
+
+<ul>
+	<li>Congrats!
+	<ul>
+		<li>&nbsp; you solved Tuesday puzzle in 00:00 minutes</li>
+	</ul>
+	</li>
+	<li><strong>&#39;2&nbsp;Day Streak&#39;</strong> message should be displayed in yellow color banner.</li>
+</ul>
+
+<p>* <strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">PDF&nbsp;Page</a></strong><strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">&nbsp;Link</a>&nbsp;to verify the message</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Close the Congrats Modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should be closed successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Verify the streak message below the Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Star icon follow by <strong>You&#39;re on 2&nbsp;Day Streak</strong> message should be present&nbsp;</li>
+	<li><strong>KEEP IT GOING</strong> should be removed from the message&nbsp;</li>
+	<li>No of day&#39;s mentioned in the message should be same as mentioned on <strong>Congrats</strong> modal message</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132317" name="Vertical Streak for Seven Current Streak and Eight Days in a row">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[590]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the message &quot;You&#39;re on 7 day Streak&quot; message on the game hub page after solving today&#39;s daily without cheat when Current Streak is 6&nbsp;and Days in a row are 7</p>
+
+<p>Story ticket Jira link:&nbsp;https://jira.nyt.net/browse/XWD-7448</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>User should be on XWD page</li>
+	<li>Subscriber user with&nbsp;<strong>6 Current Streak</strong>&nbsp;and&nbsp;<strong>7 Days in a Row</strong>&nbsp;should be logged in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Verify the Streak Message on below the Daily Puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>&#39;You&#39;re on 6&nbsp;day streak! KEEP IT GOING&#39; should be present below daily puzzle tile</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click on Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Game Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Solve the puzzle without using any cheat&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Congratulations modal with Gold Star should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Verify the messages on the Congratulations modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following messages should be displayed:</p>
+
+<ul>
+	<li>Congrats!
+	<ul>
+		<li>&nbsp; you solved a Tuesday puzzle in XX:XX minutes</li>
+	</ul>
+	</li>
+	<li><strong>&#39;7&nbsp;Day Streak&#39;</strong> message should be displayed in yellow color banner.</li>
+</ul>
+
+<p>* <strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">PDF&nbsp;Page</a></strong><strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">&nbsp;Link</a>&nbsp;to verify the message</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Close the Congrats Modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should be closed successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Verify the streak message below the Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Star icon follow by <strong>You&#39;re on 7&nbsp;Day Streak</strong> message should be present&nbsp;</li>
+	<li><strong>KEEP IT GOING</strong> should be removed from the message&nbsp;</li>
+	<li>No of days mentioned in the message should be same as mentioned on <strong>Congrats</strong> modal message</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132358" name="Days In A Row message on Hub when Current Streak is 3 and Days in a row are 4">
+	<node_order><![CDATA[5]]></node_order>
+	<externalid><![CDATA[591]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify &quot;Days In A Row&quot; message on the Games Hub page and Congrats modal&nbsp;after solving today&#39;s daily with gold when Current Streak is 3 and Days in a row are 4</p>
+
+<p>Reference Story Ticket link:&nbsp;https://jira.nyt.net/browse/XWD-7553</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>User is on XWD hub page</li>
+	<li>Subscriber user with <strong>3&nbsp;current streak</strong>&nbsp;and <strong>4&nbsp;days in a row</strong>&nbsp;is logged-in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Verify the Message on below the Daily Puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>&#39;You&nbsp;solved last dayofweek!&nbsp;<strong>KEEP IT GOING</strong>&#39; should be shown&nbsp;</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Game Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Solve the puzzle without using any cheat&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Congratulations modal with Gold Star should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Verify the messages on the Congratulations modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following messages should be displayed:</p>
+
+<ul>
+	<li>Congrats!
+	<ul>
+		<li>&nbsp; you solved Tuesday puzzle in XX:XX minutes</li>
+	</ul>
+	</li>
+	<li><strong>&#39;5 DayofWeek IN A ROW&#39;</strong> message should be displayed in yellow color banner wtth a star icon in front</li>
+</ul>
+
+<p>* <strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">PDF&nbsp;Page</a></strong><strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">&nbsp;Link</a>&nbsp;to verify the message</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Close the Congrats Modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should get closed successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Go to Hub page</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Verify the streak message below the Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Star icon follow by <strong>You&#39;ve solved 5 DayOfWeek in a row!</strong>&nbsp;message should be shown</li>
+	<li><strong>KEEP IT GOING</strong> should be removed from the message&nbsp;</li>
+	<li>No of days mentioned in the message should be same as mentioned on <strong>Congrats</strong> modal message</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132371" name="Days In A Row message on Hub when Current Streak is 0 and Days in a row is 1">
+	<node_order><![CDATA[6]]></node_order>
+	<externalid><![CDATA[592]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify &quot;Days In A Row&quot; message on the Games Hub page and Congrats modal&nbsp;after solving today&#39;s daily with gold when Current Streak is 0&nbsp;and Days in a row is 1</p>
+
+<p>Reference Story Ticket link:&nbsp;https://jira.nyt.net/browse/XWD-7553</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>User is on XWD hub page</li>
+	<li>Subscriber user with 0<strong>&nbsp;current streak</strong>&nbsp;and 1<strong>&nbsp;days in a row</strong>&nbsp;is logged-in</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Verify the Message on below the Daily Puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>&#39;You&nbsp;solved last dayofweek!&nbsp;<strong>KEEP IT GOING</strong>&#39; should be shown&nbsp;</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to Game Play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Solve the puzzle without using any cheat&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Congratulations modal with Gold Star should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Verify the messages on the Congratulations modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following messages should be displayed:</p>
+
+<ul>
+	<li>Congrats!
+	<ul>
+		<li>&nbsp; you solved a Tuesday puzzle in XX:XX minutes</li>
+	</ul>
+	</li>
+	<li><strong>&#39;2&nbsp;DayofTheWeek IN A ROW&#39;</strong> message should be displayed in yellow color banner wtth a star icon in front</li>
+</ul>
+
+<p>* <strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">PDF&nbsp;Page</a></strong><strong><a href="https://docs.google.com/presentation/d/1TGTeBayiGwExt-bdbDIshWa-TKuwB9xSBCi8EK2uWbc/edit#slide=id.g3dea5c501c_0_160">&nbsp;Link</a>&nbsp;to verify the message</strong></p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Close the Congrats Modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal should get closed successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Go to Hub page</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Verify the streak message below the Daily puzzle tile</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Star icon follow by <strong>You&#39;ve solved 2&nbsp;DayOfWeek in a row!</strong>&nbsp;message should be shown</li>
+	<li><strong>KEEP IT GOING</strong> should be removed from the message&nbsp;</li>
+	<li>No of days mentioned in the message should be same as mentioned on <strong>Congrats</strong> modal message</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="132380" name="Streak and Days In A Row Message UI on Hub page">
+	<node_order><![CDATA[7]]></node_order>
+	<externalid><![CDATA[593]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify Streaks and Days In A Row Message UI on Hub page on Desktop and mobile browsers.</p>
+
+<p><strong>Story Ticket Ref link:&nbsp;</strong><br />
+https://jira.nyt.net/browse/XWD-7448<br />
+https://jira.nyt.net/browse/XWD-7553</p>
+
+<p><em><strong>Point to remember:&nbsp;Please note that the&nbsp;smallest screen size design&nbsp;(e.g. iPhone 5) has been adjusted. Gold star icon is removed and text is centered.&nbsp;</strong></em></p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>Subscriber is logged-in and is at Hub page with at least Streak/Days In A Row message exists on hub</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Verify streak/Days In A Row message below today&#39;s daily</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Message should be shown with gold star icon below today&#39;s daily crossword followed by separator line and then READ ABOUT TODAY&#39;S PUZZLE ON WORDPLAY.</li>
+	<li>KEEP IT GOING should be shown in next line in bold</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Verify message on mobile browser</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Message should be shown with gold star icon in front&nbsp;below today&#39;s daily crossword followed by separator line and then READ ABOUT TODAY&#39;S PUZZLE ON WORDPLAY.</li>
+	<li>KEEP IT GOING should be shown in next line in bold</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Verify lines above and below The Mini puzzle (on mobile browser</p>
+]]></actions>
+	<expectedresults><![CDATA[<ul>
+	<li>Section separator line should NOT appear above and below The Mini section at hub page.</li>
+	<li>And below The Mini section - title should be &#39;Sponsored Puzzle&#39; followed by puzzle.</li>
+	<li>And in non-sponsorship state, title should be Tips and Tricks followed by puzzle</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+</testsuite><testsuite id="132733" name="AutoCheck" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="127876" name="Autocheck settings persists when user reopens the puzzle">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[496]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Check Autocheck settings does not persist when user checks Autocheck on opened puzzle then closes the puzzle and open again</p>
+]]></summary>
+	<preconditions><![CDATA[<ol>
+	<li>At least one puzzle should be in Not Started/In Progress state for logged-in Subscribed user.</li>
+</ol>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to &#39;https://www.stg.nytimes.com/crosswords&#39;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on any Not Started puzzle.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Play page of selected puzzle should get open with &#39;Ready to Get Started&#39; prompt and OK button.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Ok&#39; prompt.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Play Page should get enabled and timer should get started.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click Check of Tool bar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Dropdown should get open with options - Autocheck, Square, Word and Puzzle.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Autocheck&#39; from dropdown options.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Below prompt should appear with NEVERMIND &amp; USE AUTOCHECK buttons (in blue):</p>
+
+<p>Using autocheck will exclude this puzzle from a streak.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Use &#39;Autocheck&#39; option.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Prompt should get close and timer should be running and &#39;Autocheck&#39; in blue should be shown.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Crossword&#39; icon at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click on the same puzzle again.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Play page of selected puzzle should get open with &#39;Ready to Get Started&#39; prompt and OK button.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Ok&#39; button on prompt.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Play puzzle should get enabled to play and timer should get start from where it was paused.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Verify &#39;Autocheck&#39; in Toolbar and enter a correct and incorrect letter in two diferent squares.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&nbsp;&#39;Autocheck&#39; should be shown checked in toolbar and autocheck SHOULD &nbsp;be performed on puzzle squares.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="129499" name="Autocheck modal on fresh system/device">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[555]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Check Autocheck modal appears on opening any puzzle very first time on fresh system&nbsp;</p>
+]]></summary>
+	<preconditions><![CDATA[<ol>
+	<li>Test sytem/device is available to test on which Staging XWD never opened.</li>
+	<li>No user is logged-in.</li>
+</ol>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Launch browser</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Browser gets launched</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Go to&nbsp;https://www.stg.nytimes.com/crosswords</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click Daily Mini and check Autocheck Modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should appear with following string, gif and button.</p>
+
+<p>Message string:&nbsp;We&rsquo;ve added Autocheck, a new feature that helps you improve your game. Turn it on in the Check menu above the puzzle.</p>
+
+<p>Gif:&nbsp;https://docs.google.com/presentation/d/1BP638qTeVyMU2w_blzX4-wnuuegqcGYJ6R6DJBY4oEA/edit#slide=id.p</p>
+
+<p>A separator line should be shown</p>
+
+<p>&#39;Ready to start solving&#39; string should be shown below line.</p>
+
+<p>Ok button should be shown in last</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Crossword&#39; at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Login&#39; at top right</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Login options screen should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Enter valid email and password of subscribed user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Details should get entered in respective fields</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click Login</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should get logged-in successfully and Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click The Daily Crossword and check Autocheck Modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should appear with following string, gif and button.</p>
+
+<p>Message string:&nbsp;We&rsquo;ve added Autocheck, a new feature that helps you improve your game. Turn it on in the Check menu above the puzzle.</p>
+
+<p>Gif:&nbsp;https://docs.google.com/presentation/d/1BP638qTeVyMU2w_blzX4-wnuuegqcGYJ6R6DJBY4oEA/edit#slide=id.p</p>
+
+<p>A separator line should be shown</p>
+
+<p>&#39;Ready to start solving&#39; string should be shown below line.</p>
+
+<p>Ok button should be shown in last</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Crossword&#39; at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Click My Account at top right</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Drop down options should be shown</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Click Log Out</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should get logged out successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Click Continue as Anonymous user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[14]]></step_number>
+	<actions><![CDATA[<p>Click Daily Mini</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[15]]></step_number>
+	<actions><![CDATA[<p>Click Ok of modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[17]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Crossword&#39; at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[18]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Login&#39; at top right</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Login options screen should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[19]]></step_number>
+	<actions><![CDATA[<p>Enter valid email and password of subscribed user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Details should get entered in respective fields</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[20]]></step_number>
+	<actions><![CDATA[<p>Click Login</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should get logged-in successfully and Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[21]]></step_number>
+	<actions><![CDATA[<p>Click The Daily Crossword and check Autocheck Modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should appear with following string, gif and button.</p>
+
+<p>Message string:&nbsp;We&rsquo;ve added Autocheck, a new feature that helps you improve your game. Turn it on in the Check menu above the puzzle.</p>
+
+<p>Gif:&nbsp;https://docs.google.com/presentation/d/1BP638qTeVyMU2w_blzX4-wnuuegqcGYJ6R6DJBY4oEA/edit#slide=id.p</p>
+
+<p>A separator line should be shown</p>
+
+<p>&#39;Ready to start solving&#39; string should be shown below line.</p>
+
+<p>Ok button should be shown in last</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[22]]></step_number>
+	<actions><![CDATA[<p>Click Ok of modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[23]]></step_number>
+	<actions><![CDATA[<p>Click Archive at top</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Archive page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[24]]></step_number>
+	<actions><![CDATA[<p>Click on any different daily crossword</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should NOT be shown.</p>
+
+<p>Ready to get started alert should be shown with OK button.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[25]]></step_number>
+	<actions><![CDATA[<p>Click My Account &gt; Log Out</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should get logged out successfully</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[26]]></step_number>
+	<actions><![CDATA[<p>Click Continue as anonymous</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[27]]></step_number>
+	<actions><![CDATA[<p>Click on daily mini and check Autocheck modal&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should NOT be shown</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127587" name="AutoCheck">
+	<node_order><![CDATA[13]]></node_order>
+	<externalid><![CDATA[494]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>A user can autocheck their answers in the game</p>
+
+<p>Story Ticket:&nbsp;<a href="https://jira.nyt.net/browse/XWD-6874">XWD-6874</a>&nbsp;,&nbsp;<a href="https://jira.nyt.net/browse/XWD-6875">XWD-6875</a>&nbsp;,&nbsp;<a href="https://jira.nyt.net/browse/XWD-6928">XWD-6928</a></p>
+
+<p>Google Doc of Specs:&nbsp;<a href="https://docs.google.com/presentation/d/1TdCofC6vr_tWiDDky_q1AIqX4S3jBSgCDTSrKVycIR0/edit?ts=5b27be96#slide=id.g3c0ca41cce_0_11" rel="nofollow">https://docs.google.com/presentation/d/1TdCofC6vr_tWiDDky_q1AIqX4S3jBSgCDTSrKVycIR0/edit?ts=5b27be96#slide=id.g3c0ca41cce_0_11</a></p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to&nbsp;<em>https://www.stg.nytimes.com/crosswords</em></p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Games Hub Page appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Tap on the either the Daily or Mini Puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User is now in the game play page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p><strong>On Desktop:</strong></p>
+
+<p>Tap on the &#39;Check&#39; button on the left</p>
+
+<p>&nbsp;</p>
+
+<p><strong>On Mobile:</strong></p>
+
+<p>Tap on &#39;Check and Reveal&#39;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>A dropdown should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Autocheck&#39;</p>
+
+<p>&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>- A modal should appear &#39;Using Autocheck will exclude this puzzle from a streak&#39;</p>
+
+<p>----- States that solving with this setting will not qualify for streaks and gold stars.</p>
+
+<p>----- Option to not see message again</p>
+
+<p>----- &#39;Nevermind&#39; button</p>
+
+<p>----- &#39;Use Autocheck&#39;</p>
+
+<p>- The dropdown closes and now the &#39;Autocheck&#39; appears in an active state</p>
+
+<p>- The &#39;Check&#39; button no longer appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Tap the &#39;Autocheck&#39; button to show the dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p><strong>Desktop:</strong></p>
+
+<p>Verify the following appears</p>
+
+<p>- Autocheck with a check mark in front of the word&nbsp;</p>
+
+<p>- &#39;Square&#39; is inactive (greyed out)</p>
+
+<p>- &#39;Word&#39; is inactive (greyed out)</p>
+
+<p>-&nbsp;&#39;Puzzle&#39; is inactive (greyed out)</p>
+
+<p><strong>Mobile:</strong>&nbsp;(the inactive states will appear in next release)</p>
+
+<p>Verify the following appears</p>
+
+<p>- Autocheck with a yellow check mark in front of the word</p>
+
+<p>- &#39;Square&#39; is inactive (greyed out)</p>
+
+<p>- &#39;Word&#39; is inactive (greyed out)</p>
+
+<p>-&nbsp;&#39;Puzzle&#39; is inactive (greyed out)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Enter any letter&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify a check occurs on that character&nbsp;</p>
+
+<p>- A red slash if the character is incorrect</p>
+
+<p>- No slash if the character is correct</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Enter another letter in the next square</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the check continues to occur&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Autocheck&#39; and turn off the Autocheck</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck is turned off</p>
+
+<p>- All red slashes disappear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Enter any letter</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify no check occurs</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="129543" name="Autocheck modal in other puzzle if Ok of Autocheck was clicked once">
+	<node_order><![CDATA[15]]></node_order>
+	<externalid><![CDATA[556]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Check Autocheck modal does not appear if &#39;Show timer&#39; option is unchecked in puzzle settings</p>
+]]></summary>
+	<preconditions><![CDATA[<p>&nbsp;</p>
+
+<ol>
+	<li>Test system/device is available&nbsp;on which XWD never opened.</li>
+	<li>&#39;Show timer&#39; option is checked in Puzzle Settings of test Subscribed user.</li>
+</ol>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open browser on Test System/device mentioned in Precondition and go to &#39;https://www.stg.nytimes.com/crosswords&#39;&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Login with Subscribed user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Subscribed user should get logged-in successfully and Game Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click on The Daily Crossword</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should appear with message, gif and Ok button</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click Ok of modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal window should get closed and puzzle page should get enabled</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click Crossword label at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click on Monthly Bonus puzzle and check for Autocheck modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck modal window should NOT appear. &#39;Ready to get started&#39; prompt should appear with OK button.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="129553" name="Autocheck modal when 'Show timer' is off in settings">
+	<node_order><![CDATA[16]]></node_order>
+	<externalid><![CDATA[557]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Check Autocheck modal does not appear if &#39;Show timer&#39; option is unchecked in puzzle settings</p>
+]]></summary>
+	<preconditions><![CDATA[<ol>
+	<li>Subscribed user is logged-in.</li>
+	<li>User is at Game Hub page.</li>
+	<li>&#39;Show timer&#39; option is checked in puzzle settings of logged-in subscriber.</li>
+</ol>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click on green icon near to Crossword label at top left to enter in&nbsp; Short mode!</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Page gets reload, subscribed user gets into Shortz mode</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click The Daily Crossword</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Either Autocheck modal or Ready to Get Started modal should appear</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click Ok</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click Settings at left of Task bar above grid</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Settings modal window should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Uncheck &#39;Autocheck notice already seen&#39; in Debug Settings</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck notice already seen should get unchecked</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Uncheck &#39;Show timer&#39; in Interaction section</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Show timer&#39; should get unchecked</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click outside Settings modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Settings modal window should get closed</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click Crossword heading at top left</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Game Hub page should get open</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Click the Daily Crossword and check for Autocheck modal window</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Autocheck Modal window should NOT appear.</p>
+
+<p>And &#39;Ready to get started&#39; prompt should also not appear.</p>
+
+<p>Puzzle play page should get open directly.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+</testsuite>
+<testcase internalid="126787" name="Mini &amp; Daily gameplay page (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[5]]></node_order>
+	<externalid><![CDATA[479]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Open app as XWD user&nbsp;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open any Mini or Daily puzzle.&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Ready to get started?&#39; modal appears on screen.</p>
+
+<p>Verify gameboard section is inactive (greyed out a bit), clues are hidden, timer does not start</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Dismiss modal window by clicking/tapping the &#39;Ok&#39; button</p>
+
+<p><strong>Note: </strong>Clicking/tapping outside the modal, does not dismiss it</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Crossword title section contains:</p>
+
+<p>- Weekday Month DD, YYYY<br />
+- Puzzle type or Name (if any)<br />
+▪ By AUTHOR<br />
+▪ Edited by EDITOR (if puzzle has a editor)</p>
+
+<p>***&nbsp; Notes (if any) with a possible &#39;Reveal Answer&#39; spoiler button (if applicable)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Check the game nav</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following items are present (left to right):</p>
+
+<p>- Settings Cog;<br />
+- Timer with a pause option (if enabled);<br />
+- Rebus,</p>
+
+<p>- Clear (Incomplete, Word, Puzzle, Puzzle&amp;Timer)</p>
+
+<p>-&nbsp;Reveal (Square, Word, Puzzle)</p>
+
+<p>- Check (Autocheck, Square, Word, Puzzle)<br />
+- Pencil icon (to enter/leave pencil mode)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Look at the&nbsp;gameplay&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Following items are present:</p>
+
+<p>- Cluebar&nbsp;</p>
+
+<p>- Grid (1 Across square is focused)</p>
+
+<p>- Two question lists (Across and Down)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127949" name="Timer Pause button (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[6]]></node_order>
+	<externalid><![CDATA[502]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to&nbsp;<em>www.stg.nytimes.com/crosswords</em></p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The games hub page appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click/Tap on any puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The game play page appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>If the timer is active, hover over the pause button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The pause buttons color should change from light blue to dark blue</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click/Tap the pause button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The pause modal should appear with the following:</p>
+
+<p>- &#39;Your game has been&nbsp;<strong>paused</strong>&#39;</p>
+
+<p>- Resume button</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click/Tap outside of the modal window&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the modal window closes</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click/Tap the pause button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the modal appears again</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Tap the &#39;Resume&#39;&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the modal closes</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="126937" name="Puzzle Icon - Progress Indication (Automated | Chrome, Safari)">
+	<node_order><![CDATA[7]]></node_order>
+	<externalid><![CDATA[481]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>Log In as XWD user&nbsp;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to www.stg.nytimes.com/crossword as a user with no progress</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page loads as expected and verify that the Daily and Mini Puzzle do not have any progress</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Open any puzzle and make a progress</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle icon fills up with blue cells depending on amount of progress made</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Open Today&#39;s puzzle in&nbsp;Archive</p>
+
+<p>- Make a progress</p>
+
+<p>- Go to Games Hub&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify more&nbsp;progress has been updated in the puzzle icon</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Open one puzzle for the last week in Archive</p>
+
+<p>- Make a progress</p>
+
+<p>- Go to Games Hub</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>In the Last 7 days tab</p>
+
+<p>- Verify that puzzle has the same progress&nbsp;</p>
+
+<p>In progress tab</p>
+
+<p>- Verify that puzzle appears in &#39;In Progress&#39; section&nbsp;&nbsp;</p>
+
+<p>- Verify the progress is the same as the progress in the &#39;Last 7 days&#39; tab</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Go to the same puzzle and clear it</p>
+
+<p>- Go back to the&nbsp;Games Hub&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the puzzle icon (standard, black and white) can be found for corresponding puzzle in the Archive viewer tab, &#39;last 7 days&#39;, &#39;In Progress&#39; tab</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click on the Monthly Bonus puzzle and make some&nbsp;progress</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>In the Games Hub</p>
+
+<p>- The puzzle appears in the &#39;In Progress&#39; section***** <strong>Find out from Rachel</strong><br />
+- In Archive page, in the Bonus tab, the icon has the same progress indicator</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="126939" name="Print / Download options (Partially automated)">
+	<node_order><![CDATA[8]]></node_order>
+	<externalid><![CDATA[482]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to www.stg.nytimes.com/crosswords and log in as a subscriber user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Game Hub page loads</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>On the top right hand corner of the daily puzzle, the print and download icon should be visible</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Print and download&nbsp;icon appear as expected</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Scroll down and hover over the monthly puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print &amp; download hover state appears underneath the puzzle icon&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>In the &#39;Last 7 days&#39; tab hover over the puzzle icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print and download icon appears underneath the puzzle icon and it covers&nbsp;the date of the puzzle</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>In the &#39;In Progress&#39; tab hover over the puzzle icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print and download icon appears underneath the puzzle icon and it covers&nbsp;the date of the puzzle</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Go to the Archive page and in the daily tab hover over any puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print and download icon appears underneath the puzzle icon and it covers&nbsp;the number of the puzzle</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Go to the &#39;Bonus tab&#39; and hover over the puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print and download icon appears underneath the puzzle icon&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Go to the &#39;Acrostic&#39; tab and hover over the puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Only the print icon appears underneath the puzzle icon</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Go to the &#39;Variety&#39; tab and hover over a couple puzzles</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The print icon will appear as expected and the download icon may or may not appear for puzzles where download is not offered</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Click on Print icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&nbsp;</p>
+
+<p>Verify the Print Modal appears</p>
+
+<p><strong>Break Print into its own test case</strong></p>
+
+<p>THEN Print popup window should appear with the following attributes:<br />
+- Title &quot;Print&quot;<br />
+- Crossword name (e.g. &#39;Daily Crossword&#39;) and date (e.g. January 9, 2009)<br />
+- Puzzle / Solution/Newspaper Version&nbsp;Radio button<br />
+- Ink Saver slider with preview<br />
+- &#39;Print&quot; button<br />
+- &#39;X&#39; to close the window</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Select Newspaper Version radio button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Radio button should get selected.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Click on Print button.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Print preview should be open in new tab in PDF format.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Click on Download icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle is downloaded in few seconds</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127377" name="Check Button (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[9]]></node_order>
+	<externalid><![CDATA[486]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to stg.nytimes.com and click on any daily or mini puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User is taken to the gameplay page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Make some progress and click/tap on the &#39;Check&#39; button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the &#39;Check&#39; menu dropdown appears with the following buttons:</p>
+
+<p>- Autocheck</p>
+
+<p>- Check</p>
+
+<p>- Word</p>
+
+<p>- Puzzle</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Square&#39; button within the Check dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- If the letter is correct, the input turns blue</p>
+
+<p>- If the letter is incorrect, the red forward slash appear (grey for pencil, black for pen)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Enter a new letter for that same square</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the red slash disappears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Word&#39; button within the Check dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- If the word/letters&nbsp;are&nbsp;correct, the input turns blue</p>
+
+<p>- If the word/letters are&nbsp;incorrect, the red forward slash appear (grey for pencil, black for pen)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Puzzle&#39; button within the Check dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- If the word/letters&nbsp;are&nbsp;correct, the input turns blue</p>
+
+<p>- If the word/letters are&nbsp;incorrect, the red forward slash appear (grey for pencil, black for pen)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="131162" name="Reveal Button (Partially automated)">
+	<node_order><![CDATA[10]]></node_order>
+	<externalid><![CDATA[583]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Go to stg.nytimes.com and click on any daily or mini puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User is taken to the gameplay page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Make some progress and click/tap on the &#39;Reveal&#39; button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the &#39;Reveal&#39; menu dropdown appears with the following buttons:</p>
+
+<p>- Check</p>
+
+<p>- Word</p>
+
+<p>- Puzzle</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Square&#39; button within the Reveal dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- Red flag with a circle in the center appears in the top right hand corner of the square</p>
+
+<p>- The correct letter is revealed&nbsp;</p>
+
+<p>- The letter turns blue</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Type any letter within the revealed square</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the letter does not change</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Word&#39; button within the Reveal dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- Red flag with a circle in the center appears in the top right hand corner of the square</p>
+
+<p>- The correct word is revealed&nbsp;</p>
+
+<p>- The letter turns blue</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Puzzle&#39; button within the Reveal dropdown</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- A warning modal appears - &quot;Are you sure you want to reveal the puzzle?&quot;</p>
+
+<p>-&nbsp;&#39;Nevermind&#39; button</p>
+
+<p>-&nbsp;&#39;Reveal&#39; button in blue</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Tap the &#39;Nevermind&#39; button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the modal disappears and nothing on the puzzle has changed</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click/tap on the &#39;Puzzle&#39; button within the Reveal dropdown and then click on the Reveal button in the warning modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the Congrats modal appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Tap the X button on the Congrats modal</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Verify the following:</p>
+
+<p>- Red flag with a circle in the center appears in the top right hand corner of the squares</p>
+
+<p>- The puzzle is revealed&nbsp;</p>
+
+<p>- The letters are blue</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127379" name="Rebus mode (Automated | Chrome, Safari, Firefox)">
+	<node_order><![CDATA[11]]></node_order>
+	<externalid><![CDATA[487]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open any puzzle. Press ESC key</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Rebus mode is activate&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Dismiss Rebus mode. Focus on another square. Click on &#39;Rebus&#39; button on toolbar</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>While square is in rebus mode.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Enter a few letters. Press ENTER button&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>All letters appear in a&nbsp;single square</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Activate Rebus mode again in the same square&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Cursor is placed at the end of the input</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Yes]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127381" name="Modal windows (Partially automated)">
+	<node_order><![CDATA[12]]></node_order>
+	<externalid><![CDATA[488]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<h3><strong><a href="https://docs.google.com/spreadsheets/d/1F60LQWjTHEfj1RBF-zoz6erZ-fty8gwaSSopFQqP7tU/edit#gid=807858562">Update Modal Window Messages Link</a></strong></h3>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open Today&#39;s puzzle&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Ready to get started&#39; modal appears&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on Timer&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Your game has been&nbsp;<strong>paused</strong>.&#39; modal appears</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>User a Reveal option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Modal appears:</p>
+
+<p>Just so you know...</p>
+
+<p>Using Reveal means this puzzle won&rsquo;t count towards your streak or statistics.</p>
+
+<p>Don&rsquo;t warn me again - check box</p>
+
+<p>CANCEL and REVEAL - buttons&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click on Clear &gt; Puzzle option&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Are you sure you want to erase the puzzle?</p>
+
+<p>CANCEL and ERASE - buttons</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click on Clear&gt; Puzzle&amp;Timer</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Just so you know...</p>
+
+<p>Resetting the timer means this puzzle won&rsquo;t count towards your streak or statistics.</p>
+
+<p>Don&rsquo;t warn me again - check box</p>
+
+<p>CANCEL and START OVER - buttons</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Click on Check option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Just so you know...</p>
+
+<p>Using Check means this puzzle won&rsquo;t count towards your streak or statistics.</p>
+
+<p>Don&rsquo;t warn me again - check box</p>
+
+<p>CANCEL and CHECK - buttons&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[Partial]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127518" name="Congratulation">
+	<node_order><![CDATA[13]]></node_order>
+	<externalid><![CDATA[491]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Solve Today&#39;s puzzle without cheats. Inspect Congrats modal&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Gold&nbsp;star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a &#39;<strong><em>day of week&#39;</em></strong> puzzle&nbsp;in&nbsp; hh:mm .</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Solve not Toda&#39;y puzzle&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Blue star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a &#39;<strong><em>day of week&#39;</em></strong> puzzle&nbsp;in&nbsp; hh:mm .</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Solve any Mini puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Blue star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a&nbsp;Mini&nbsp;puzzle&nbsp;in hh:mm .</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Solve any Bonus puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Blue star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a&nbsp;Bonus&nbsp;puzzle&nbsp;in&nbsp;hh:mm .</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Solve Acrostic puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Blue star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a&nbsp;Variety&nbsp;puzzle in hh:mm.</p>
+
+<p>Review Puzzle and HOME - buttons</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Solve Variety puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Blue star</p>
+
+<p>Congratulations!</p>
+
+<p>You solved a&nbsp;Variety&nbsp;puzzle&nbsp;in hh:mm.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127548" name="Default Puzzle Settings">
+	<node_order><![CDATA[14]]></node_order>
+	<externalid><![CDATA[493]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open a fresh puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Focus is on the leftmost top non-black square;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Type a letter</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Focused square is populated with the typed letter;</p>
+
+<p>Focus moves to the next square;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Fill in all the letters of the current word</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Current word is populated with the typed letters;</p>
+
+<p>Focus does not jump&nbsp;to the&nbsp;next word;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Jump to the next clue (if not jumping back) - ON</p>
+
+<p>Fill in all letters of the current word</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Current word is populated with the typed letters;</p>
+
+<p>Focus&nbsp;jumps to the next word;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="127896" name="Puzzle timer gets paused in different scenarios (Partially automated)">
+	<node_order><![CDATA[17]]></node_order>
+	<externalid><![CDATA[499]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<ol>
+	<li>Subscribed user is logged-in on&nbsp;https://www.stg.nytimes.com/crossword.</li>
+	<li>&#39;The Game Hub&#39; page is opened.</li>
+</ol>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open any puzzle from &#39;The Game Hub&#39; page.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Ready to Get Started&#39; prompt should appear.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click OK.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle should get open to play and timer should get start.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Make a note of timer then add a new tab in same browser, remain on this new tab for 30 seconds.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>New tab will get added in browser</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Switch to &#39;Crossword&#39; tab.</p>
+
+<p>&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&nbsp;&#39;Your game has been paused.&#39; alert should be shown with &#39;Resume&#39; button in blue and &#39;paused&#39; text in bold.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Resume&#39; button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle page should get into edit mode and timer should start from <strong>n+30 Secs</strong>, where <strong>n</strong> = time when new tab was added/opened in <strong>step #2</strong>.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>&nbsp;Make a note of timer and minimize the browser by clicking Minimize button of browser.</p>
+
+<p>&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Browser will get minimize</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p><br />
+Wait for 30 seconds and then launch browser again.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Your game has been paused.&#39; alert should be shown with &#39;Resume&#39; button in blue and &#39;paused&#39;&nbsp;text in bold.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Click &#39;Resume&#39; button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle page should get into edit mode and timer should start from <strong>n+30 Secs</strong>, where <strong>n </strong>= time when browser was minimized in <strong>step #4</strong>.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="128779" name="Almost There Modal (Partially automated)">
+	<node_order><![CDATA[18]]></node_order>
+	<externalid><![CDATA[528]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify the Modal Text when user filled puzle with some incorrect data.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>1.User should be <a href="https://www.nytimes.com/crosswords/">XWD Subscriber</a> and logged in.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click on Play on&nbsp; Today&#39;s Puzzle/Mini puzzle</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User should be redirected to game play page.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>1.Complete&nbsp;the puzzle without using any life saving option.</p>
+
+<p>2.Enter atleast one wrong word</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>On completion Almost there modal displayed on screen.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Inspect the &#39;Almost There&#39; modal.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>The Basic Structure should be :</p>
+
+<ul>
+	<li>Headline Text:<br />
+	Match text with list:&nbsp;<a href="https://docs.google.com/spreadsheets/d/1F60LQWjTHEfj1RBF-zoz6erZ-fty8gwaSSopFQqP7tU/edit#gid=2045925552">&#39;Almost There Rotating List&#39;</a></li>
+	<li>Body text :<br />
+	The puzzle is filled, but at least one square&rsquo;s amiss.&nbsp;<a href="https://docs.google.com/spreadsheets/d/1F60LQWjTHEfj1RBF-zoz6erZ-fty8gwaSSopFQqP7tU/edit#gid=2045925552">Shucks Rotating List</a></li>
+	<li>Button Text:<br />
+	Keep Trying</li>
+</ul>
+
+<p>&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Keep Trying&#39; button&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<ol>
+	<li>Modal should be dismissed.</li>
+	<li>Puzzle should be resumed.</li>
+</ol>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="128995" name="Check puzzle icon on performing reset operation on gold star achieved puzzled. (Partially automated)">
+	<node_order><![CDATA[19]]></node_order>
+	<externalid><![CDATA[541]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>1.User should be logged in.<br />
+2.User should be subscribe.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:40px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Open&nbsp;&nbsp;https://www.stg.nytimes.com/crosswords.</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:40px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Games&nbsp;Hub&nbsp;page&nbsp;is&nbsp;opened</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:19px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;on&nbsp;the&nbsp;<strong>play&nbsp;</strong>button&nbsp;of&nbsp;Today&nbsp;Daily&nbsp;puzzle</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:19px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Page&nbsp;will&nbsp;redirect&nbsp;to&nbsp;the&nbsp;Daily&nbsp;puzzle.</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:19px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;&quot;Ok&quot;&nbsp;for&nbsp;Ready&nbsp;to&nbsp;get&nbsp;started?&nbsp;popup</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:19px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Puzzle&nbsp;will&nbsp;appear&nbsp;and&nbsp;timer&nbsp;will&nbsp;start.</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:40px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Complete&nbsp;the&nbsp;puzzle&nbsp;without&nbsp;using&nbsp;reveal&nbsp;&amp;&nbsp;check</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:40px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt"><strong>Gold&nbsp;star</strong>&nbsp;appears&nbsp;with&nbsp;<strong>Congratulations!</strong>&nbsp;and&nbsp;text&nbsp;&quot;<strong>You&nbsp;solved&nbsp;a&nbsp;DAY&nbsp;OF&nbsp;WEEK&nbsp;puzzle&nbsp;in&nbsp;HH:MM:SS.</strong>&quot;</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:19px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;on&nbsp;<strong>crossword&nbsp;Logo</strong>.</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:19px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Games&nbsp;Hub&nbsp;page&nbsp;is&nbsp;opened</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:100px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;on&nbsp;the&nbsp;Daily&nbsp;puzzle&nbsp;<strong>Review&nbsp;button</strong></td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:100px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Page&nbsp;will&nbsp;redirect&nbsp;to&nbsp;the&nbsp;Daily&nbsp;puzzle&nbsp;page.<br />
+			-The&nbsp;puzzle&nbsp;would&nbsp;be&nbsp;completed<br />
+			-Across&nbsp;&amp;&nbsp;down&nbsp;hint&nbsp;would&nbsp;be&nbsp;grayed&nbsp;out<br />
+			-Timer&nbsp;would&nbsp;be&nbsp;stopped</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:19px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;on&nbsp;Reset&nbsp;button</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:19px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">The&nbsp;puzzle&nbsp;will&nbsp;be&nbsp;reset</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:40px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Click&nbsp;on&nbsp;<strong>crossword&nbsp;Logo</strong>.</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:40px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Page&nbsp;will&nbsp;redirect&nbsp;to&nbsp;the&nbsp;Games&nbsp;Hub&nbsp;page.</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:19px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Mouse&nbsp;over&nbsp;on&nbsp;Today&nbsp;Daily&nbsp;puzzle</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:19px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt"><strong>Play&#39;</strong>&nbsp;blue&nbsp;banner&nbsp;appears with<strong>&nbsp;Gold&nbsp;star</strong>.</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<table cellspacing="0" style="height:40px; width:291.00pt">
+	<tbody>
+		<tr>
+			<td style="width:291.00pt">Scroll&nbsp;down&nbsp;and&nbsp;Click&nbsp;on&nbsp;In&nbsp;Progress&nbsp;Tab</td>
+		</tr>
+	</tbody>
+</table>
+]]></actions>
+	<expectedresults><![CDATA[<table cellspacing="0" style="height:40px; width:337.50pt">
+	<tbody>
+		<tr>
+			<td style="width:337.50pt">Todays&nbsp;Daily&nbsp;puzzle&nbsp;will&nbsp;be&nbsp;displayed&nbsp;&nbsp;with&nbsp;the&nbsp;gold&nbsp;star&nbsp;with&nbsp;play&nbsp;blue&nbsp;banner</td>
+		</tr>
+	</tbody>
+</table>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+
+<testcase internalid="129106" name="Registered User:Sync 'Clear' functionality across platforms. (Partially automated)">
+	<node_order><![CDATA[20]]></node_order>
+	<externalid><![CDATA[546]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Verify when user clear the data&nbsp;&nbsp;on web the puzzle should also get clear on mobile apps.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>1.User should be XWD subscribe and logged in.</p>
+
+<p>2. Today&#39;s puzzle is solved.</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Play&#39; on today&#39;s puzzle.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>&#39;Ready to get started&#39; modal should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Ok&#39; button.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle play screen should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click on &#39;Clear&#39; present above the puzzle.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>List of clear option should be displayed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Select &#39;Puzzle&#39; option from the list .&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Puzzle should get cleared.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Open Crossword app on mobile.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>App should be launched successfully.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Login with the same account credentials.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user should be logged in successfully.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Tap on &#39;Today&#39;s&#39; puzzla.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Opened puzzle should not contain any filled square.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+<custom_fields>
+	<custom_field>
+		<name><![CDATA[XWD Automation]]></name>
+		<value><![CDATA[No]]></value>
+	</custom_field>
+</custom_fields></testcase>
+</testsuite>
