@@ -8,7 +8,8 @@ const Table = require('cli-table')
 
 const xotree = new objtree()
 
-// Collect XML files from folder
+
+const EXECUTION_TYPE_STRING = '2'
 
 let finalArr = []
 let subSuites = []
@@ -17,7 +18,7 @@ let totalAutomatedSteps = 0
 let grandTotalSteps = 0
 let grandTotalAutomatedSteps = 0
 
-// Gather up the exports
+// Collect XML files from folder
 const xmlFolder = './xml/'
 fs.readdirSync(xmlFolder).forEach(file => {
   if (path.extname(file) === '.xml') {
@@ -117,10 +118,14 @@ function getTestCases(testCaseBlock) {
   return cases
 }
 
+/**
+ * Given an array of test steps returns a number signifying how many are marked 'Automated'
+ * @param {array} steps 
+ */
 function calculateNumberAutomated(steps) {
   totalAutomated = 0
   steps.forEach(step => {
-    if (step.execution_type === '2') {
+    if (step.execution_type === EXECUTION_TYPE_STRING) {
       totalAutomated++
     }
   })
@@ -128,7 +133,8 @@ function calculateNumberAutomated(steps) {
 }
 
 /**
- * {parentSuite} [array]
+ * Recursively creates testsuite objects, including their nested test cases
+ * @param {array} parentSuite 
  */
 function getSuites(parentSuite) {
   if (parentSuite) {
