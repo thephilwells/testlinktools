@@ -99,14 +99,22 @@ const table = new Table({
 // Pretty print stats for this xml
 finalArr.forEach(suite => {
   table.push([
-    ` ${suite.testsuite.name}`,
+    ` SUITE: ${suite.testsuite.name}`,
     suite.totalSteps,
     (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
     (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
   ])
+  suite.testsuite.testcase.forEach(testCase => {
+    table.push([
+      `  ${testCase.id}`,
+      testCase.steps.length,
+      (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+      (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+    ])
+  })
   suite.testsuite.testsuite.forEach(subSuite => {
     table.push([
-      `  ${subSuite.name}`,
+      `  SUB-SUITE: ${subSuite.name}`,
       subSuite.totalSteps,
       subSuite.percentAutomated,
       subSuite.percentManual
