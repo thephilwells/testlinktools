@@ -1,13 +1,9 @@
-// Put Testlink XML files in /xml
-// Run index.js
-// Output will be Istanbul-like coverage report for all test steps
 const fs = require('fs')
 const path = require('path')
 const objtree = require('objtree')
 const Table = require('cli-table')
 
 const xotree = new objtree()
-
 
 const EXECUTION_TYPE_STRING = '2'
 
@@ -30,9 +26,10 @@ fs.readdirSync(xmlFolder).forEach(file => {
     const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
     const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
     let finalObj = {}
+    const testSuiteToActOn = getSuites(obj.testsuite.testsuite)
     finalObj.testsuite = {
       name: obj.testsuite["-name"],
-      testsuite: getSuites(obj.testsuite.testsuite),
+      testsuite: testSuiteToActOn,
       testcase: testCaseAtThisLevel,
       numberOfTestSteps: testStepsAtThisLevel,
       percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
@@ -98,6 +95,30 @@ table.push([
 console.log(table.toString())
 
 /**
+ * Recursively creates testsuite objects, including their nested test cases
+ * @param {array} parentSuite 
+ */
+function getSuites(parentSuite) {
+  if (parentSuite) {
+    for (let i = 0; i < parentSuite.length; i++) {
+      const testCaseAtThisLevel = getTestCases(parentSuite[i].testcase)
+      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
+      const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
+      const testSuiteToActOn = parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null
+      subSuites[i] = {
+        name: parentSuite[i]['-name'],
+        testsuite: testSuiteToActOn,
+        testcase: testCaseAtThisLevel,
+        totalSteps: testStepsAtThisLevel,
+        percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+        percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+      }
+    }
+  }
+  return subSuites
+}
+
+/**
  * Strips busy test cases down to just the data we need
  * @param {array} testCaseBlock 
  */
@@ -130,27 +151,4 @@ function calculateNumberAutomated(steps) {
     }
   })
   return totalAutomated
-}
-
-/**
- * Recursively creates testsuite objects, including their nested test cases
- * @param {array} parentSuite 
- */
-function getSuites(parentSuite) {
-  if (parentSuite) {
-    for (let i = 0; i < parentSuite.length; i++) {
-      const testCaseAtThisLevel = getTestCases(parentSuite[i].testcase)
-      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
-      const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
-      subSuites[i] = {
-        name: parentSuite[i]['-name'],
-        testsuite: parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null,
-        testcase: testCaseAtThisLevel,
-        totalSteps: testStepsAtThisLevel,
-        percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
-        percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
-      }
-    }
-  }
-  return subSuites
 }
