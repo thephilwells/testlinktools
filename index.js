@@ -3,11 +3,13 @@
 // Output will be Istanbul-like coverage report for all test steps
 const fs = require('fs')
 const objtree = require('objtree')
+const Table = require('cli-table')
+
 const xotree = new objtree()
 
 // Collect XML files from folder
 
-let finalObj = {}
+let finalArr = []
 let subSuites = []
 let totalSteps = 0
 let totalAutomatedSteps = 0
@@ -21,14 +23,20 @@ fs.readdirSync(xmlFolder).forEach(file => {
   const testCaseAtThisLevel = getTestCases(obj.testsuite.testcase)
   const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.steps.length}, 0)
   const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
+  let finalObj = {}
   finalObj.testsuite = {
     name: obj.testsuite["-name"],
-    testsuite: getSuites(obj.testsuite),
+    testsuite: getSuites(obj.testsuite.testsuite),
     testcase: testCaseAtThisLevel,
     numberOfTestSteps: testStepsAtThisLevel,
     percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
     percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
   }
+  finalObj.totalSteps = totalSteps
+  finalObj.totalAutomatedSteps = totalAutomatedSteps
+  totalSteps = 0
+  totalAutomatedSteps = 0
+  finalArr.push(finalObj)
 })
 
 /**
@@ -37,16 +45,16 @@ fs.readdirSync(xmlFolder).forEach(file => {
 function getSuites(parentSuite) {
   if (parentSuite) {
     for (let i = 0; i < parentSuite.length; i++) {
-      const testCaseAtThisLevel = getTestCases(parentsuite.testcase)
-      const testStepsAtThisLevel = testCaseAtThisLevel.steps.length
-      const numberAutomatedAtThisLevel = testCaseAtThisLevel.numberAutomated
+      const testCaseAtThisLevel = getTestCases(parentSuite[i].testcase)
+      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.steps.length}, 0)
+      const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
       subSuites[i] = {
-        name: parentsuite[i]['-name'],
-        testsuite: getSuites(parentSuite[i].testsuite),
+        name: parentSuite[i]['-name'],
+        testsuite: parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null,
         testcase: testCaseAtThisLevel,
         numberOfTestCases: testStepsAtThisLevel,
-        percentAutomated: (numberAutomatedAtThisLevel / testStepsAtThisLevel).toFixed(2),
-        percentManual: (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel).toFixed(2),
+        percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+        percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
       }
     }
   }
@@ -63,8 +71,10 @@ function getTestCases(testCaseBlock) {
         steps: noSteps,
         numberAutomated: calculateNumberAutomated(noSteps)
       })
+      totalSteps += noSteps.length
     })
   }
+  totalAutomatedSteps += cases.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
   return cases
 }
 
@@ -78,10 +88,22 @@ function calculateNumberAutomated(steps) {
   return totalAutomated
 }
 
-console.log(JSON.stringify(finalObj))
 
-// Calculate coverage percentage
+// console.log(JSON.stringify(finalObj))
 
-// Update total coverage percent
+const table = new Table({
+  head: ['Test', '# of Steps', '% Automated', '% Manual'],
+  colWidths: [30, 15, 15, 15]
+})
 
 // Pretty print stats for this xml
+finalArr.forEach(suite => {
+  table.push([
+    suite.testsuite.name,
+    suite.totalSteps,
+    (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
+    (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
+  ])
+})
+
+console.log(table.toString())
