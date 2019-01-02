@@ -1,0 +1,1 @@
+Drop your exported TestLink XML files in this folder prior to running!

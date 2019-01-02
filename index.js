@@ -13,6 +13,8 @@ let finalArr = []
 let subSuites = []
 let totalSteps = 0
 let totalAutomatedSteps = 0
+let grandTotalSteps = 0
+let grandTotalAutomatedSteps = 0
 
 const xmlFolder = './xml/'
 fs.readdirSync(xmlFolder).forEach(file => {
@@ -34,6 +36,8 @@ fs.readdirSync(xmlFolder).forEach(file => {
   }
   finalObj.totalSteps = totalSteps
   finalObj.totalAutomatedSteps = totalAutomatedSteps
+  grandTotalSteps += totalSteps
+  grandTotalAutomatedSteps += totalAutomatedSteps
   totalSteps = 0
   totalAutomatedSteps = 0
   finalArr.push(finalObj)
@@ -88,9 +92,6 @@ function calculateNumberAutomated(steps) {
   return totalAutomated
 }
 
-
-// console.log(JSON.stringify(finalObj))
-
 const table = new Table({
   head: ['Test', '# of Steps', '% Automated', '% Manual'],
   colWidths: [80, 15, 15, 15]
@@ -129,5 +130,12 @@ finalArr.forEach(suite => {
     })
   })
 })
+
+table.push([
+  'GRAND TOTAL',
+  grandTotalSteps,
+  (100 * (grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
+  (100 * (1 - grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
+])
 
 console.log(table.toString())
