@@ -17,6 +17,7 @@ let totalAutomatedSteps = 0
 let grandTotalSteps = 0
 let grandTotalAutomatedSteps = 0
 
+// Gather up the exports
 const xmlFolder = './xml/'
 fs.readdirSync(xmlFolder).forEach(file => {
   if (path.extname(file) === '.xml') {
@@ -46,6 +47,86 @@ fs.readdirSync(xmlFolder).forEach(file => {
   }
 })
 
+// Pretty print stats for this xml
+const table = new Table({
+  head: ['Test', '# of Steps', '% Automated', '% Manual'],
+  colWidths: [80, 15, 15, 15]
+})
+
+finalArr.forEach(suite => {
+  table.push([
+    ` SUITE: ${suite.testsuite.name}`,
+    suite.totalSteps,
+    (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
+    (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
+  ])
+  suite.testsuite.testcase.forEach(testCase => {
+    table.push([
+      `  ${testCase.name}`,
+      testCase.steps.length,
+      (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+      (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+    ])
+  })
+  suite.testsuite.testsuite.forEach(subSuite => {
+    table.push([
+      `  SUB-SUITE: ${subSuite.name}`,
+      subSuite.totalSteps,
+      subSuite.percentAutomated,
+      subSuite.percentManual
+    ])
+    subSuite.testcase.forEach(testCase => {
+      table.push([
+        `   ${testCase.name}`,
+        testCase.steps.length,
+        (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+        (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+      ])
+    })
+  })
+})
+
+// Last row
+table.push([
+  'GRAND TOTAL',
+  grandTotalSteps,
+  (100 * (grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
+  (100 * (1 - grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
+])
+
+console.log(table.toString())
+
+/**
+ * Strips busy test cases down to just the data we need
+ * @param {array} testCaseBlock 
+ */
+function getTestCases(testCaseBlock) {
+  let cases = []
+  if (testCaseBlock) {
+    testCaseBlock.forEach(testcase => {
+      let noSteps = testcase.steps.step
+      cases.push({
+        name: testcase['-name'],
+        steps: noSteps,
+        numberAutomated: calculateNumberAutomated(noSteps)
+      })
+      totalSteps += noSteps.length
+    })
+  }
+  totalAutomatedSteps += cases.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
+  return cases
+}
+
+function calculateNumberAutomated(steps) {
+  totalAutomated = 0
+  steps.forEach(step => {
+    if (step.execution_type === '2') {
+      totalAutomated++
+    }
+  })
+  return totalAutomated
+}
+
 /**
  * {parentSuite} [array]
  */
@@ -67,78 +148,3 @@ function getSuites(parentSuite) {
   }
   return subSuites
 }
-
-function getTestCases(testCaseBlock) {
-  let cases = []
-  if (testCaseBlock) {
-    testCaseBlock.forEach(testcase => {
-      let noSteps = testcase.steps.step
-      cases.push({
-        id: testcase['-name'],
-        steps: noSteps,
-        numberAutomated: calculateNumberAutomated(noSteps)
-      })
-      totalSteps += noSteps.length
-    })
-  }
-  totalAutomatedSteps += cases.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
-  return cases
-}
-
-function calculateNumberAutomated(steps) {
-  totalAutomated = 0
-  steps.forEach(step => {
-    if (step.execution_type === '2') {
-      totalAutomated++
-    }
-  })
-  return totalAutomated
-}
-
-const table = new Table({
-  head: ['Test', '# of Steps', '% Automated', '% Manual'],
-  colWidths: [80, 15, 15, 15]
-})
-
-// Pretty print stats for this xml
-finalArr.forEach(suite => {
-  table.push([
-    ` SUITE: ${suite.testsuite.name}`,
-    suite.totalSteps,
-    (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
-    (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
-  ])
-  suite.testsuite.testcase.forEach(testCase => {
-    table.push([
-      `  ${testCase.id}`,
-      testCase.steps.length,
-      (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-      (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-    ])
-  })
-  suite.testsuite.testsuite.forEach(subSuite => {
-    table.push([
-      `  SUB-SUITE: ${subSuite.name}`,
-      subSuite.totalSteps,
-      subSuite.percentAutomated,
-      subSuite.percentManual
-    ])
-    subSuite.testcase.forEach(testCase => {
-      table.push([
-        `   ${testCase.id}`,
-        testCase.steps.length,
-        (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-        (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-      ])
-    })
-  })
-})
-
-table.push([
-  'GRAND TOTAL',
-  grandTotalSteps,
-  (100 * (grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
-  (100 * (1 - grandTotalAutomatedSteps / grandTotalSteps)).toFixed(2),
-])
-
-console.log(table.toString())
