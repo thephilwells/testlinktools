@@ -2,6 +2,7 @@
 // Run index.js
 // Output will be Istanbul-like coverage report for all test steps
 const fs = require('fs')
+const path = require('path')
 const objtree = require('objtree')
 const Table = require('cli-table')
 
@@ -18,29 +19,31 @@ let grandTotalAutomatedSteps = 0
 
 const xmlFolder = './xml/'
 fs.readdirSync(xmlFolder).forEach(file => {
-  let xml = fs.readFileSync(`./xml/${file}`, 'utf-8')
+  if (path.extname(file) === '.xml') {
+    let xml = fs.readFileSync(`./xml/${file}`, 'utf-8')
 
-  // For each xml, create an object with Tests, Steps, and Execution values
-  let obj = xotree.parseXML(xml)
-  const testCaseAtThisLevel = getTestCases(obj.testsuite.testcase)
-  const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.steps.length}, 0)
-  const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
-  let finalObj = {}
-  finalObj.testsuite = {
-    name: obj.testsuite["-name"],
-    testsuite: getSuites(obj.testsuite.testsuite),
-    testcase: testCaseAtThisLevel,
-    numberOfTestSteps: testStepsAtThisLevel,
-    percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
-    percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+    // For each xml, create an object with Tests, Steps, and Execution values
+    let obj = xotree.parseXML(xml)
+    const testCaseAtThisLevel = getTestCases(obj.testsuite.testcase)
+    const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
+    const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
+    let finalObj = {}
+    finalObj.testsuite = {
+      name: obj.testsuite["-name"],
+      testsuite: getSuites(obj.testsuite.testsuite),
+      testcase: testCaseAtThisLevel,
+      numberOfTestSteps: testStepsAtThisLevel,
+      percentAutomated: (100 * (numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+      percentManual: (100 * (1 - numberAutomatedAtThisLevel / testStepsAtThisLevel)).toFixed(2),
+    }
+    finalObj.totalSteps = totalSteps
+    finalObj.totalAutomatedSteps = totalAutomatedSteps
+    grandTotalSteps += totalSteps
+    grandTotalAutomatedSteps += totalAutomatedSteps
+    totalSteps = 0
+    totalAutomatedSteps = 0
+    finalArr.push(finalObj)
   }
-  finalObj.totalSteps = totalSteps
-  finalObj.totalAutomatedSteps = totalAutomatedSteps
-  grandTotalSteps += totalSteps
-  grandTotalAutomatedSteps += totalAutomatedSteps
-  totalSteps = 0
-  totalAutomatedSteps = 0
-  finalArr.push(finalObj)
 })
 
 /**
@@ -50,8 +53,8 @@ function getSuites(parentSuite) {
   if (parentSuite) {
     for (let i = 0; i < parentSuite.length; i++) {
       const testCaseAtThisLevel = getTestCases(parentSuite[i].testcase)
-      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.steps.length}, 0)
-      const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
+      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
+      const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
       subSuites[i] = {
         name: parentSuite[i]['-name'],
         testsuite: parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null,
@@ -78,7 +81,7 @@ function getTestCases(testCaseBlock) {
       totalSteps += noSteps.length
     })
   }
-  totalAutomatedSteps += cases.reduce((acc, cur) => {return acc + cur.numberAutomated}, 0)
+  totalAutomatedSteps += cases.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
   return cases
 }
 
