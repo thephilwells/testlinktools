@@ -23,7 +23,11 @@ fs.readdirSync(xmlFolder).forEach(file => {
     // For each xml, create an object with Tests, Steps, and Execution values
     let obj = xotree.parseXML(xml)
     const testCaseAtThisLevel = getTestCases(obj.testsuite.testcase)
-    const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
+    const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {
+      let curSteps
+      cur.steps.length === undefined ? curSteps = [cur.steps] : curSteps = cur.steps
+      return acc + curSteps.length
+    }, 0)
     const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
     let finalObj = {}
     const testSuiteToActOn = getSuites(obj.testsuite.testsuite)
@@ -54,31 +58,31 @@ const table = new Table({
 finalArr.forEach(suite => {
   table.push([
     ` SUITE: ${suite.testsuite.name}`,
-    suite.totalSteps,
-    (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
-    (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2),
+    suite.totalSteps || 0,
+    (100 * (suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2) || 0,
+    (100 * (1 - suite.totalAutomatedSteps / suite.totalSteps)).toFixed(2) || 0,
   ])
   suite.testsuite.testcase.forEach(testCase => {
     table.push([
       `  ${testCase.name}`,
-      testCase.steps.length,
-      (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-      (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+      testCase.steps.length || 1,
+      (100 * (testCase.numberAutomated / (testCase.steps.length || 1))).toFixed(2) || 0,
+      (100 * (1 - testCase.numberAutomated / (testCase.steps.length || 1))).toFixed(2) || 0,
     ])
   })
   suite.testsuite.testsuite.forEach(subSuite => {
     table.push([
       `  SUB-SUITE: ${subSuite.name}`,
-      subSuite.totalSteps,
-      subSuite.percentAutomated,
-      subSuite.percentManual
+      subSuite.totalSteps || 0,
+      subSuite.percentAutomated || 0,
+      subSuite.percentManual || 0
     ])
     subSuite.testcase.forEach(testCase => {
       table.push([
         `   ${testCase.name}`,
-        testCase.steps.length,
-        (100 * (testCase.numberAutomated / testCase.steps.length)).toFixed(2),
-        (100 * (1 - testCase.numberAutomated / testCase.steps.length)).toFixed(2),
+        testCase.steps.length || 1,
+        (100 * (testCase.numberAutomated / (testCase.steps.length || 1))).toFixed(2) || 0,
+        (100 * (1 - testCase.numberAutomated / (testCase.steps.length || 1))).toFixed(2) || 0,
       ])
     })
   })
@@ -102,7 +106,11 @@ function getSuites(parentSuite) {
   if (parentSuite) {
     for (let i = 0; i < parentSuite.length; i++) {
       const testCaseAtThisLevel = getTestCases(parentSuite[i].testcase)
-      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.steps.length }, 0)
+      const testStepsAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => {
+        let curSteps
+        cur.steps.length === undefined ? curSteps = [cur.steps] : curSteps = cur.steps
+        return acc + curSteps.length
+      }, 0)
       const numberAutomatedAtThisLevel = testCaseAtThisLevel.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
       const testSuiteToActOn = parentSuite[i].testsuite ? getSuites(parentSuite[i].testsuite) : null
       subSuites[i] = {
@@ -125,14 +133,15 @@ function getSuites(parentSuite) {
 function getTestCases(testCaseBlock) {
   let cases = []
   if (testCaseBlock) {
+    if (testCaseBlock.length === undefined) { testCaseBlock = [testCaseBlock]}
     testCaseBlock.forEach(testcase => {
-      let noSteps = testcase.steps.step
+      let noSteps = testcase.steps ? testcase.steps.step : []
       cases.push({
         name: testcase['-name'],
         steps: noSteps,
         numberAutomated: calculateNumberAutomated(noSteps)
       })
-      totalSteps += noSteps.length
+      totalSteps += noSteps.length || 1
     })
   }
   totalAutomatedSteps += cases.reduce((acc, cur) => { return acc + cur.numberAutomated }, 0)
@@ -144,6 +153,7 @@ function getTestCases(testCaseBlock) {
  * @param {array} steps 
  */
 function calculateNumberAutomated(steps) {
+  if (steps.length === undefined) { steps = [steps] }
   totalAutomated = 0
   steps.forEach(step => {
     if (step.execution_type === EXECUTION_TYPE_STRING) {
